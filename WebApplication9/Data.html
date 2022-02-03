@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+
+</head>
+<body style="padding-top:20px">
+    <div class="col-md-10-col-md-offset-1">
+        <div class="well">
+            <input type="button" id="loaddata" class="btn btn-success" value="loaddata" />
+            <span id="name" class="text-muted"></span>
+
+            <input type="button" id="logout" class="btn btn-success pull-right" value="logout" />
+
+        </div>
+
+        <div class="well hidden" id="divdata" >
+
+            <table class="tab table-bordered" id="tabledata">
+               <thead>
+
+                   <tr>
+
+                       <th>id</th>
+                       <th>farsname</th>
+                       <th>lastname </th>
+                       <th>gender</th>
+                       <th>salary</th>
+
+                   </tr>
+
+               </thead>
+
+                <tbody id="tlbode">
+
+
+                </tbody>
+            </table>
+               </div>
+
+        <div class="modal fade" tabindex="-1" id="errormodel" data-keyboard="false" data-backdrop="static">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4>session expried</h4>
+                    </div>
+                    <div class="modal-body">
+                        <h2>  plaes close this massge to login agin</h2>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" data-dismiss="modal" class="btn btn-success">close</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div id="diverror" class="alert alert-danger collapse">
+
+            <a id="linkclose" class="close" href="#">&times;</a>
+            <div id="doverrortict"></div>
+        </div>
+    </div>
+
+    
+    <script src="Scripts/jquery-3.4.1.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        
+
+        $(document).ready(function () {
+            $('#name').text('Helo' + sessionStorage.getItem('UserName'));
+
+            if (sessionStorage.getItem('accessToken') == null) {
+                window.location.href = "login.html";
+
+                //localstorage بتحفظ حتى لو اغلق المتصفح
+            }
+
+            $('#logout').click(function () {
+
+                sessionStorage.removeItem('accessToken');
+                window.location.href = "login.html";
+            });
+
+            $('#linkclose').click(function () {
+                $('#diverror').hide('fade');
+            });
+
+            $('errormodel').on('hidden.bs.modal', function () {
+                window.location.href = "login.html";
+            });
+
+            $('#loaddata').click(function () {
+
+
+                $.ajax({
+
+                    url: '/api/employe',
+
+                    method: 'GET',
+
+                    headers: {
+                        'Authorization': 'Bearer ' + sessionStorage.getItem('accessToken')
+
+                     
+                    },
+                    success: function (data) {
+                        $('#divdata').removeClass('hidden');
+                        $('#tlbode').empty();
+                        $.each(data, function (index,value) {
+                            var row = $('<tr><td>' + value.id + '</td><td>'
+                                + value.firstname + '</td><td>'
+                                + value.lastname + '</td><td>'
+                                + value.gender + '</td><td>'
+                                + value.salary + '</td></tr>');
+                            $('#tabledata').append(row);
+
+                        });
+
+                    },
+                    error: function (jqxht) {
+                        if (jqxht.status == "401") {
+
+                            $('#errormodel').modal('show');
+                        }
+                        else {
+                            $('#doverrortict').text(jqxht.responseText);
+                            $('#diverror').show('fade');
+                        }
+
+                    }
+
+                });
+
+
+
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>

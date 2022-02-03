@@ -1,0 +1,35 @@
+C:\Users\My Laptop\source\repos\WebApplication9\employeserver\bin\Debug\employeserver.dll.config
+C:\Users\My Laptop\source\repos\WebApplication9\employeserver\bin\Debug\employeserver.dll
+C:\Users\My Laptop\source\repos\WebApplication9\employeserver\bin\Debug\employeserver.pdb
+C:\Users\My Laptop\source\repos\WebApplication9\employeserver\bin\Debug\EntityFramework.dll
+C:\Users\My Laptop\source\repos\WebApplication9\employeserver\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\My Laptop\source\repos\WebApplication9\employeserver\bin\Debug\EntityFramework.xml
+C:\Users\My Laptop\source\repos\WebApplication9\employeserver\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\My Laptop\source\repos\WebApplication9\employeserver\obj\Debug\employeserver.csproj.CoreCompileInputs.cache
+C:\Users\My Laptop\source\repos\WebApplication9\employeserver\obj\Debug\employeserver.csproj.CopyComplete
+C:\Users\My Laptop\source\repos\WebApplication9\employeserver\obj\Debug\employeserver.dll
+C:\Users\My Laptop\source\repos\WebApplication9\employeserver\obj\Debug\employeserver.pdb
+C:\Users\My Laptop\source\repos\project_authn_botstrab_out2\employeserver\bin\Debug\employeserver.dll.config
+C:\Users\My Laptop\source\repos\project_authn_botstrab_out2\employeserver\bin\Debug\employeserver.dll
+C:\Users\My Laptop\source\repos\project_authn_botstrab_out2\employeserver\bin\Debug\employeserver.pdb
+C:\Users\My Laptop\source\repos\project_authn_botstrab_out2\employeserver\bin\Debug\EntityFramework.dll
+C:\Users\My Laptop\source\repos\project_authn_botstrab_out2\employeserver\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\My Laptop\source\repos\project_authn_botstrab_out2\employeserver\bin\Debug\EntityFramework.xml
+C:\Users\My Laptop\source\repos\project_authn_botstrab_out2\employeserver\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\My Laptop\source\repos\project_authn_botstrab_out2\employeserver\obj\Debug\employeserver.csproj.AssemblyReference.cache
+C:\Users\My Laptop\source\repos\project_authn_botstrab_out2\employeserver\obj\Debug\employeserver.csproj.CoreCompileInputs.cache
+C:\Users\My Laptop\source\repos\project_authn_botstrab_out2\employeserver\obj\Debug\employeserver.csproj.CopyComplete
+C:\Users\My Laptop\source\repos\project_authn_botstrab_out2\employeserver\obj\Debug\employeserver.dll
+C:\Users\My Laptop\source\repos\project_authn_botstrab_out2\employeserver\obj\Debug\employeserver.pdb
+C:\Users\basel\Desktop\source\repos\project_authn_botstrab_out2\employeserver\bin\Debug\employeserver.dll.config
+C:\Users\basel\Desktop\source\repos\project_authn_botstrab_out2\employeserver\bin\Debug\employeserver.dll
+C:\Users\basel\Desktop\source\repos\project_authn_botstrab_out2\employeserver\bin\Debug\employeserver.pdb
+C:\Users\basel\Desktop\source\repos\project_authn_botstrab_out2\employeserver\bin\Debug\EntityFramework.dll
+C:\Users\basel\Desktop\source\repos\project_authn_botstrab_out2\employeserver\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\basel\Desktop\source\repos\project_authn_botstrab_out2\employeserver\bin\Debug\EntityFramework.xml
+C:\Users\basel\Desktop\source\repos\project_authn_botstrab_out2\employeserver\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\basel\Desktop\source\repos\project_authn_botstrab_out2\employeserver\obj\Debug\employeserver.csproj.AssemblyReference.cache
+C:\Users\basel\Desktop\source\repos\project_authn_botstrab_out2\employeserver\obj\Debug\employeserver.csproj.CoreCompileInputs.cache
+C:\Users\basel\Desktop\source\repos\project_authn_botstrab_out2\employeserver\obj\Debug\employeserver.csproj.CopyComplete
+C:\Users\basel\Desktop\source\repos\project_authn_botstrab_out2\employeserver\obj\Debug\employeserver.dll
+C:\Users\basel\Desktop\source\repos\project_authn_botstrab_out2\employeserver\obj\Debug\employeserver.pdb

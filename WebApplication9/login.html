@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+
+</head>
+<body style="padding-top:20px">
+    <div class="col-md-10-col-md-offset-1">
+        <div class="well">
+
+            <table class="table table-bordered">
+                <thead>
+                    <tr class="success">
+                        <td colspan="2">
+
+                            user existing
+                            <a class="btn btn-success pull-right" href="register.html">register</a>
+                        </td>
+
+                    </tr>
+
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>user name</td>
+                        <td><input id="username" type="text" placeholder="user name" /></td>
+
+                    </tr>
+
+
+                    <tr>
+                        <td>password</td>
+                        <td><input id="pas" type="password" placeholder="password" /></td>
+
+                    </tr>
+
+
+
+
+                    <tr class="success">
+                        <td colspan="2">
+                            <input class="btn btn-success" id="login" value="login" type="button" />
+
+                        </td>
+                    </tr>
+
+
+
+                </tbody>
+
+            </table>
+
+
+
+            <table class="table table-bordered">
+                <thead>
+                    <tr class="success">
+                        <td>
+
+                            social login
+
+                        </td>
+
+                    </tr>
+
+                </thead>
+                <tbody>
+
+                    <tr>
+
+                        <td><input id="loginwite" type="button" value="loginwite google" class="btn btn-success" /></td>
+
+                    </tr>
+
+
+
+
+
+
+
+
+                </tbody>
+
+            </table>
+
+
+            <div id="diverror" class="alert alert-danger collapse">
+
+                <a id="linkclose" class="close" href="#">&times;</a>
+                <div id="doverrortict"></div>
+            </div>
+        </div>
+
+    </div>
+    <script src="Scripts/jquery-3.4.1.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="Scripts/google.js"></script>
+    <script type="text/javascript">
+
+
+
+        $(document).ready(function () {
+            getAccssessToken();
+            $('#loginwite').click(function () {
+                window.location.href = "/api/Account/ExternalLogin?provider=Google&response_type=token&client_id=self&redirect_uri=https%3A%2F%2Flocalhost%3A44301%2Flogin.html%2F";
+            });
+            $('#linkclose').click(function () {
+                $('#diverror').hide('fade');
+            });
+
+            $('#login').click(function () {
+
+
+                $.ajax({
+
+                    url: '/token',
+                    contentType: 'application/json',
+
+                    method: 'POST',
+
+                    data: {
+                        username: $('#username').val(),
+                        password: $('#pas').val(),
+                        grant_type: 'password'
+
+                    },
+                    /* success: function(response) {
+                         $('#doverrortict').text(json.stringify(response));
+                         $('#diverror').show('fade');
+                     },*/
+
+                    success: function (response) {
+
+                        sessionStorage.setItem('accessToken', response.access_Token);
+                        sessionStorage.setItem('UserName', response.userName);
+
+                        window.location.href = "Data.html";
+
+
+                    },
+                    error: function (jqxht) {
+                        $('#doverrortict').text(jqxht.responseText);
+                        $('#diverror').show('fade');
+
+
+                    }
+
+                });
+
+
+
+            });
+
+        });
+
+    </script>
+
+</body>
+</html>
